@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home - Website Kelas</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <h2>
+        <span class="jurusan">RPL.</span><span class="kelas">2</span>
+      </h2>
+    </div>
+
+      <div class="hamburger" id="hamburger">&#9776;</div>
+
+    <nav id="navMenu" class="navMenu">
+      <div class="menu">
+        <a href="index.html">Home</a>
+        <a href="tentang.html">Tentang Kami</a>
+        <a href="galeri.html">Galeri Kami</a>
+        <a href="Latar Belakang.html">Info Website</a>
+      </div>
+      <div class="icon">
+        <a href="https://www.instagram.com/..." target="_blank">
+          <ion-icon name="logo-instagram"></ion-icon>
+        </a>
+        <a href="https://www.tiktok.com/..." target="_blank">
+          <ion-icon name="logo-tiktok"></ion-icon>
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <section class="main-content">
+    <h1 class="welcome-text">Selamat datang di Website kami, RPL 2</h1>
+    <button class="motivation-button" onclick="showMotivation()">Kata-Kata Hari Ini Mas pri</button>
+    <div id="motivation-text"></div>
+  </section>
+
+  <script>
+    const motivasi = [
+      "Teruslah belajar, karena ilmu tak akan pernah habis.",
+      "Gagal itu biasa, yang penting tetap mencoba.",
+      "Kerja keras hari ini adalah kesuksesan di masa depan.",
+      "Jangan takut bermimpi besar."
+    ];
+
+    function showMotivation() {
+      const text = motivasi[Math.floor(Math.random() * motivasi.length)];
+      document.getElementById('motivation-text').textContent = text;
+    }
+
+
+    document.addEventListener('DOMContentLoaded', function () {
+      const hamburger = document.getElementById('hamburger');
+     const navMenu = document.getElementById('navMenu');
+
+     hamburger.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+    });
+  });
+
+
+  </script>
+
+</body>
+</html>

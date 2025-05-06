@@ -1,0 +1,336 @@
+:root {
+  --cyan: #00ffff;
+  --green: #008000;
+  --black: #000000;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  /*font-family: Arial, sans-serif;
+  font-family: 'Poppins', sans-serif;*/
+  font-family: 'Times New Roman', serif;
+
+
+}
+
+body {
+  background-color: var(--black);
+  color: white;
+  padding-top: 60px;  
+}
+
+.putih {
+  color: white;
+  text-shadow:
+  0 0 5px white,
+  0 0 10px white,
+  0 0 15px darkgray;
+}
+
+.oranye {
+  color: orangered;
+  text-shadow:
+  0 0 5px orangered,
+  0 0 10px orangered,
+  0 0 15px rgb(255, 102, 0);
+}
+
+header {
+  padding: 20px;
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  position: fixed; /*header pada tempatnya*/
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  background: rgba(30, 30, 30, 0.6); /*blur putih semi transparan*/
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px); /*dukungan safari*/
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Garis bawah animasi */
+header::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 5px;
+  width: 100%;
+  background: linear-gradient(270deg, #FF69B4, #8A2BE2, #FF69B4);
+  background-size: 400% 100%;
+  animation: slideLine 5s linear infinite;
+
+  /* Glow */
+  box-shadow: 0 0 10px rgba(255, 0, 157, 0.8),
+              0 0 20px rgba(255, 0, 217, 0.6),
+              0 0 30px rgba(212, 0, 255, 0.4);
+  border-radius: 3px;
+}
+
+.logo .jurusan{
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.logo .kelas{
+  color: orangered;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.welcome-text {
+  font-size: 24px;
+  font-weight: bold;
+  color: linear-gradient(270deg, #FF69B4, #8A2BE2, #FF69B4);
+  margin-right: auto;
+  text-shadow: 0 0 10px rgba(255, 0, 157, 0.8),
+              0 0 20px rgba(255, 0, 217, 0.6),
+              0 0 30px rgba(212, 0, 255, 0.4);
+}
+
+/*kotak saran*/
+.email-icon {
+  color: white;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #FF69B4;
+  border-radius: 50%;
+  padding: 12px;
+  box-shadow: 0 0 10px rgba(255, 0, 157, 0.8);
+  text-decoration: none;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s;
+}
+
+.email-icon:hover {
+  transform: scale(1.1);
+}
+
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.menu {
+  display: flex;
+  gap: 15px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 10px;
+  transition: all 0.3s ease;
+}
+
+.menu a:hover {
+  color: #3900b5;
+}
+
+.icon a {
+  color: white;
+  font-size: 20px;
+  margin-left: 10px;
+  transition: color 0.3s ease;
+}
+
+.icon a:hover {
+  color: #3900b5;
+}
+
+.hamburger {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+  color: white;
+}
+
+.main-content, .about-section, .gallery-section, .latar {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.motivation-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: var(--green);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.motivation-button:hover {
+  background-color: var(--cyan);
+  color: black;
+}
+
+#motivation-text {
+  margin-top: 20px;
+  font-style: italic;
+  color: var(--cyan);
+}
+
+.about-section p {
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+  font-size: 18px;
+}
+
+.gallery-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.gallery-item img {
+  width: 250px;
+  height: 350px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.05);
+}
+
+.photo-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.8);
+  color: #00ffff;
+  padding: 15px;
+  text-align: center;
+  transform: translateY(100%);
+  opacity: 0;
+  transition: all 0.5s ease;
+  box-shadow: 0 0 15px #00ffff;
+  border-top: 2px solid #00ffff;
+  border-radius: 0 0 10px 10px;
+}
+
+.gallery-item.active .photo-info {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  /* Tampilkan hamburger saat mobile */
+  .hamburger {
+    display: block;  
+  }
+
+  /* Gaya navigasi saat mobile */
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  /* MENU SLIDE DARI KANAN */
+  .navMenu {
+    display: flex;  
+    flex-direction: column;
+    align-items: flex-start;
+    position: fixed; 
+    top: 80px; /* Tidak menutupi header */
+    right: -250px;     
+    width: 250px;
+    height: calc(100% - 80px); /* Sisakan ruang untuk header */
+    padding: 20px;
+    height: 100vh;
+    gap: 15px;
+    transition: right 0.5s ease; 
+    z-index: 998; /* Lebih rendah dari header */
+  
+    background: rgba(154, 154, 154, 0.605); 
+    backdrop-filter: blur(10px); /* Efek blur untuk latar belakang */
+    -webkit-backdrop-filter: blur(10px); /* Dukungan untuk Safari */
+    box-shadow: -2px 0 10px rgba(214, 214, 214, 0.5); /* Sedikit bayangan dari kiri */
+  }
+  
+  /* Efek untuk elemen sebelum menu */
+  .navMenu::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5); /* Hitam transparan */
+    backdrop-filter: blur(10px); /* Efek blur seperti header */
+    -webkit-backdrop-filter: blur(10px); /* Untuk Safari */
+    z-index: -1; /* Agar berada di bawah konten menu */
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.5); /* Bayangan halus */
+    border-left: 1px solid rgba(255,255,255,0.1); /* Pemisah halus di kiri */
+    border-radius: 0 0 0 10px;
+  }
+  
+  /* Mengatur item menu agar lebih jelas saat dihover */
+  .navMenu a {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Efek hover pada item menu */
+  .navMenu a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Efek hover lebih jelas */
+  }
+  
+  /* Efek saat menu terbuka */
+  .navMenu.open {
+    right: 0;
+  }
+      
+  /* Saat menu aktif, slide masuk ke layar */
+  .navMenu.active {
+    right: 0;
+  }
+
+  /* Gaya menu link di dalam menu mobile */
+  .menu {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+  }
+
+  .menu a {
+    padding: 10px 0;
+  }
+
+  /* Ikon sosial media di menu mobile */
+  .icon {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    margin-top: 20px;
+  }
+}

@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="id">
-<head>
-  <meta charset="UTF-8">
-  <title>Latar Belakang</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="script.js"></script>
-  <!-- Ionicons CDN -->
-  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Tambahan penting -->
+        <title>Latar Belakang</title>
+        <link rel="stylesheet" href="style.css">
+        <!-- Ionicons CDN -->
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+      </head>
+      
 <body>
   <header>
     <div class="logo">
@@ -38,7 +39,7 @@
   </header>
 
   <section class="latar">
-    <h1>Latar Belakang</h1>
+    <h2>Latar Belakang</h2>
     <p>Website ini masih dalam tahap pengembangan dan uji coba. Jadi maaf karna galery belum kami perbaiki.</p><br>
     <p> Jika kamu menemukan bug atau memiliki saran, silakan laporkan melalui ikon email di pojok kanan bawah.</p>
   </section>
@@ -47,5 +48,15 @@
   <a href="mailto:offclass717@gmail.com?subject=Saran%20dan%20Bug&body=Tulis%20saran%20atau%20bug%20di%20sini..." class="email-icon">
     <ion-icon name="mail"></ion-icon>
   </a>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('navMenu');
+  
+    hamburger.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+    });
+  </script>
+    
 </body>
 </html>

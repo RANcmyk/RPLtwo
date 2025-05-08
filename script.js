@@ -59,7 +59,7 @@ hamburger.addEventListener('click', function() {
   menu.classList.toggle('show');
 });
 
-document.addEventListener("DOMContentLoaded", () => {
+/**document.addEventListener("DOMContentLoaded", () => {
     const hamburger = document.getElementById("hamburger");
     const navMenu   = document.getElementById("navMenu");
   
@@ -67,13 +67,20 @@ document.addEventListener("DOMContentLoaded", () => {
     hamburger.addEventListener("click", () => {
       navMenu.classList.toggle("active");
     });
+  });**/
+
+  const navbarNav = document.querySelector('.navMenu');
+  const hamburger = document.querySelector('.hamburger');
   
-    // tutup menu jika klik di luar menu
-    document.addEventListener("click", e => {
-      // Jika klik di luar menu dan hamburger, maka tutup menu
-      if (navMenu.classList.contains("active") && !navMenu.contains(e.target) && e.target !== hamburger) {
-        navMenu.classList.remove("active");
-      }
-    });
+  // Saat hamburger diklik, toggle menu
+  hamburger.onclick = () => {
+    navbarNav.classList.toggle('active');
+  };
+  
+  // Tutup menu saat klik di luar
+  document.addEventListener('click', function(e) {
+    if (!hamburger.contains(e.target) && !navbarNav.contains(e.target)) {
+      navbarNav.classList.remove('active');
+    }
   });
   

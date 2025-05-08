@@ -8,7 +8,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Times New Roman', serif;
+  font-family: 'Orbitron', sans-serif;
 }
 
 body {
@@ -22,14 +22,9 @@ body {
   text-shadow: 0 0 5px white, 0 0 10px white, 0 0 15px darkgray;
 }
 
-.oranye {
-  color: orangered;
-  text-shadow: 0 0 5px orangered, 0 0 10px orangered, 0 0 15px rgb(255, 102, 0);
-}
-
-.latar {
-  text-align: center;
-  margin-top: 30px;
+.pink {
+  color: palevioletred;
+  text-shadow: 0 0 5px rgb(255, 0, 238), 0 0 10px rgb(255, 0, 238), 0 0 15px rgb(217, 5, 203);
 }
 
 header {
@@ -67,17 +62,18 @@ header::after {
 
 .logo .jurusan {
   color: white;
-  font-family: 'Times New Roman', Times, serif Helvetica, sans-serif;
+  font-family: 'Orbitron', sans-serif;
 }
 
 .logo .kelas {
   color: rgb(255, 0, 238);
-  font-family: 'Times New Roman', Times, serif Helvetica, sans-serif;
+  font-family: 'Orbitron', sans-serif;
 }
 
 .email-icon {
   color: white;
   position: fixed;
+  font-size: 24px;
   bottom: 20px;
   right: 20px;
   background-color: #FF69B4;
@@ -117,8 +113,8 @@ nav {
 }
 
 .menu a:hover {
-  color:  purple;
-  text-shadow: 0 0 20px rgba(243, 31, 204, 0.929);
+  color:  white;
+  text-shadow: 0 0 20px white;
 }
 
 .icon a {
@@ -129,7 +125,7 @@ nav {
 }
 
 .icon a:hover {
-  color: #3900b5;
+  color:rgb(255, 0, 238);
 }
 
 .hamburger {
@@ -139,7 +135,7 @@ nav {
   color: white;
 }
 
-.main-content, .about-section, .gallery-section, .latar {
+.main-content, .about-section, .gallery-section, .latar-section {
   text-align: center;
   padding: 50px 20px;
 }
@@ -174,7 +170,14 @@ nav {
   font-size: 18px;
 }
 
-.gallery-grid {
+.foto-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.foto-grid {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -182,7 +185,7 @@ nav {
   margin-top: 20px;
 }
 
-.gallery-item {
+.foto-item {
   position: relative;
   overflow: hidden;
   cursor: pointer;
@@ -190,7 +193,7 @@ nav {
   transition: transform 0.3s ease;
 }
 
-.gallery-item img {
+.foto-item img {
   width: 250px;
   height: 350px;
   object-fit: cover;
@@ -198,7 +201,7 @@ nav {
   transition: transform 0.3s ease;
 }
 
-.gallery-item:hover img {
+.foto-item:hover img {
   transform: scale(1.05);
 }
 
@@ -219,7 +222,7 @@ nav {
   border-radius: 0 0 10px 10px;
 }
 
-.gallery-item.active .photo-info {
+.foto-item.active .photo-info {
   transform: translateY(0);
   opacity: 1;
 }
@@ -275,9 +278,9 @@ nav {
     transition: background-color 0.3s ease;
   }
 
-  .navMenu a:hover {
+  /*.navMenu a:hover {
     background-color: rgba(255, 255, 255, 0.2);
-  }
+  }*/
 
   .navMenu.active {
     right: 0;
@@ -300,9 +303,10 @@ nav {
   }
 
   .email-icon {
-    bottom: 15px;
-    right: 15px;
     transform: scale(0.9);
+    bottom: 30px;
+    right: 30px;
+    font-size: 36px;
   }
 
   .icon {
@@ -311,4 +315,16 @@ nav {
     gap: 15px;
     margin-top: 20px;
   }
+
+  .foto-item {
+    width: 46%; /* Biar jadi 2 kolom */
+  }
+
+  .foto-item img {
+    width: 100;
+    height: auto;
+    display: block;
+    object-fit: cover; /* atau 'cover' kalau kamu mau terisi penuh (tapi hati-hati), */
+  }
+
 }

@@ -8,7 +8,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Orbitron', sans-serif;
+  font-family: 'Orbitron', sans-serif; /* Samakan di semua file */
 }
 
 body {
@@ -62,12 +62,10 @@ header::after {
 
 .logo .jurusan {
   color: white;
-  font-family: 'Orbitron', sans-serif;
 }
 
 .logo .kelas {
   color: rgb(255, 0, 238);
-  font-family: 'Orbitron', sans-serif;
 }
 
 .email-icon {
@@ -135,7 +133,7 @@ nav {
   color: white;
 }
 
-.main-content, .about-section, .gallery-section, .latar-section {
+.main-content, .about-section, .foto-section, .latar-section, .galeri-section {
   text-align: center;
   padding: 50px 20px;
 }
@@ -179,6 +177,7 @@ nav {
 
 .foto-grid {
   display: flex;
+   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   flex-wrap: wrap;
   justify-content: center;
   gap: 15px;
@@ -190,6 +189,7 @@ nav {
   overflow: hidden;
   cursor: pointer;
   border-radius: 10px;
+  background-color: #111;
   transition: transform 0.3s ease;
 }
 
@@ -213,19 +213,76 @@ nav {
   background: rgba(0, 0, 0, 0.8);
   color: #00ffff;
   padding: 15px;
-  text-align: center;
+  text-align: left;
   transform: translateY(100%);
   opacity: 0;
   transition: all 0.5s ease;
   box-shadow: 0 0 15px #00ffff;
   border-top: 2px solid #00ffff;
   border-radius: 0 0 10px 10px;
+  font-size: small;
 }
 
 .foto-item.active .photo-info {
   transform: translateY(0);
   opacity: 1;
 }
+
+.galeri-bulan {
+  margin-bottom: 40px;
+}
+
+.judul-bulan {
+  color: white;
+  font-size: 1.8rem;
+  margin-left: 20px;
+  text-align: left;       /* pastikan text-nya rata kiri */
+  width: 100%;            /* supaya bisa menempel ke kiri */
+}
+
+.galeri-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.galeri-scroll {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 15px;
+  padding: 10px 40px;
+}
+
+.galeri-scroll img {
+  height: 200px;
+  border-radius: 10px;
+  flex-shrink: 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.scroll-btn {
+  position: absolute;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  font-size: 30px;
+  cursor: pointer;
+  padding: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.scroll-btn.left {
+  left: 10px;
+}
+
+.scroll-btn.right {
+  right: 10px;
+}
+
 
 @media (max-width: 768px) {
   .hamburger {
@@ -325,6 +382,10 @@ nav {
     height: auto;
     display: block;
     object-fit: cover; /* atau 'cover' kalau kamu mau terisi penuh (tapi hati-hati), */
+  }
+
+  .galeri-scroll img {
+    height: 140px;
   }
 
 }

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Siswa Siswi - Website Kelas</title>
+  <title>Siswa</title>
   <link rel="stylesheet" href="style.css">
   <script src="script.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
@@ -25,6 +25,7 @@
         <a href="index.html">Home</a>
         <a href="tentang.html">Tentang Kami</a>
         <a href="Siswa Siswi.html">Siswa & Siswi</a>
+        <a href="galeri.html">Galery</a>
         <a href="Latar Belakang.html">Info Website</a>
       </div>
       <div class="icon">
@@ -38,23 +39,28 @@
     </nav>
   </header>
   
-  <section class="gallery-section">
+  <section class="foto-section">
     <h2>
       <span class="putih">Anggota Kelas</span> 
       <span class="pink">kami</span>
     </h2>
       <div class="foto-grid">
       <div class="foto-item" data-nama="Andi Pratama" data-kelas="XI RPL 2" data-info="Juara 1 Lomba Robotik" onclick="toggleInfo(this)">
-        <img src="img/Robot1.jpeg" alt="Robot 1">
+        <img 
+          src="https://lh3.googleusercontent.com/pw/AP1GczPP82zOD1rqLBc0L9Ub19GnqxgfRFEr-6eSn4jbI3QK4oYNybIBWYhMpCTmRKRXYtCRqlyLnKrELfgWtKNchRzKUL-byKRGVFrKLMpPXH2nBbWGEpLZYvdq7lTe3VDs45xKoawvg94O3ppP7AQelzI=w585-h878-s-no-gm?authuser=0"
+          alt="Robot 1"
+          class="foto-pic"
+        />
         <div class="photo-info">
-          <h4>Andi Pratama</h4>
-          <p>Kelas: XI RPL 2</p>
-          <p>Juara 1 Lomba Robotik</p>
+            <p><strong class="pink">Tempat Tanggal Lahir :</strong> Kendal, 14 November 2007</p>
+            <p><strong class="pink">Jenis Kelamin :</strong> Laki-laki</p>
+            <p><strong class="pink">Agama :</strong> Islam</p>
+            <p><strong class="pink">Alamat :</strong> Pesaran RT 2 RW 2 Pesaren Sukorejo Kendal</p>
         </div>
       </div>
   
       <div class="foto-item" data-nama="Budi Santoso" data-kelas="XI RPL 2" data-info="Ketua OSIS" onclick="toggleInfo(this)">
-        <img src="img/Robot2.jpeg" alt="Robot 2">
+        <img src="https://lh3.googleusercontent.com/pw/AP1GczMgjiScJ5wOJgA4gVuXIXSI2RVZzb3dm5n2gny4kdoGM9o1wDFgNKi5PwCJGe0QhQ3saHDI04AGj_idWX3jeIXeaDloF0w6hmp_u88mhHVYWjlC-NPeKR42N0biPqrFSXwkj9yW3IIPW8e1cq-M_8w=w585-h878-s-no-gm?authuser=0" alt="Robot 2">
         <div class="photo-info">
           <h4>Budi Santoso</h4>
           <p>Kelas: XI RPL 2</p>
@@ -63,7 +69,7 @@
       </div>
   
       <div class="foto-item" data-nama="Citra Lestari" data-kelas="XI RPL 1" data-info="Anggota Tim Futsal" onclick="toggleInfo(this)">
-        <img src="img/Robot3.jpeg" alt="Robot 3">
+        <img src="https://lh3.googleusercontent.com/pw/AP1GczMvl7l_eCpOlGo0RgDblcvhspFXFwvO2cjBT5aq1EMwVFzIHgqBekO-MRkngSBll8NJgOD6OOpA4S7une7QkSkxpDO0FTKMs5LzLwXrpanaafwRhlsY9P5ZjTwXpraV2F5ugP80FBh351pGYIS-IxE=w585-h878-s-no-gm?authuser=0" alt="Robot 3">
         <div class="photo-info">
           <h4>Citra Lestari</h4>
           <p>Kelas: XI RPL 1</p>
@@ -72,7 +78,7 @@
       </div>
 
       <div class="foto-item" data-nama="Budi Santoso" data-kelas="XI RPL 2" data-info="Ketua OSIS" onclick="toggleInfo(this)">
-        <img src="img/Robot1.jpeg" alt="Robot 4">
+        <img src="https://lh3.googleusercontent.com/pw/AP1GczOf_-hIjAdDN-PV7mzew56OlzqYESKIEko1wEtjWp8wwAiYcP_Rk9ASYJasle47YQNcekJP2LAhysD5Nt8ELvznFnPHLFKKjQqw5-MS54imYAvCIjXfin2pO0DdaBerrLY4WaKz0FDWv1CL3DrRfKQ=w585-h878-s-no-gm?authuser=0" alt="Robot 4">
         <div class="photo-info">
           <h4>Budi Santoso</h4>
           <p>Kelas: XI RPL 2</p>
@@ -81,7 +87,7 @@
       </div>
 
       <div class="foto-item" data-nama="Budi Santoso" data-kelas="XI RPL 2" data-info="Ketua OSIS" onclick="toggleInfo(this)">
-        <img src="img/Robot2.jpeg" alt="Robot 5">
+        <img src="https://lh3.googleusercontent.com/pw/AP1GczPvCIHR-ClZt9OrLuW2kIoAa5Z8DmkZ9CkNIZeNUXFed5hLiZaXrmSXF3NM6Arvl0MXYgmb9qVc-htCR-_kNtnihG6OYQCYmFyuwvhaJZ5wFsPjiQSmTizDyPu2gpX7nLiZ1KAZVXM_eeCy39Xn0Kw=w585-h878-s-no-gm?authuser=0" alt="Robot 5">
         <div class="photo-info">
           <h4>Budi Santoso</h4>
           <p>Kelas: XI RPL 2</p>
@@ -90,7 +96,7 @@
       </div>
 
       <div class="foto-item" data-nama="Budi Santoso" data-kelas="XI RPL 2" data-info="Ketua OSIS" onclick="toggleInfo(this)">
-        <img src="img/Robot3.jpeg" alt="Robot 6">
+        <img src="https://lh3.googleusercontent.com/pw/AP1GczP6MLZ4GBe7wOyq7XPprWdf2zIZ1U7RjKcxAFWekrjafE-3rIoEkZBo4WGnE4QRbfRsUqOgBRGE3ouUCg6MOOgmD61NMcXqrwR1dkQyFP5xTLqzE-ZvUdVD0PQBJdqoEemeW_Eog5JVbvYl6HXIBdM=w585-h878-s-no-gm?authuser=0" alt="Robot 6">
         <div class="photo-info">
           <h4>Budi Santoso</h4>
           <p>Kelas: XI RPL 2</p>
@@ -111,9 +117,6 @@
   </div>
 
   <script>
-    // Ambil elemen
-    const items    = document.querySelectorAll('.gallery-item');
-
     // Buka modal dengan data dari atribut
     items.forEach(img => {
       img.style.cursor = 'pointer';
@@ -134,15 +137,14 @@
     // Toggle untuk informasi gambar
     function toggleInfo(el) {
       // Tutup yang lain dulu
-      document.querySelectorAll('.gallery-item').forEach(item => {
+      document.querySelectorAll('.foto-item').forEach(item => {
         if (item !== el) item.classList.remove('active');
       });
 
       // Toggle class aktif
       el.classList.toggle('active');
     }
-
-    function toggleMenu() {
+  function toggleMenu() {
     document.getElementById("menu").classList.toggle("show");
   }
   </script>

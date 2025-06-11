@@ -1,149 +1,80 @@
 <!DOCTYPE html>
-<html lang="id">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Galeri Kami - Website Kelas</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="script.js"></script>
-  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-</head>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>rpltu-Galery</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    </head>
 <body>
-  <header>
-    <div class="logo">
-      <h2>
-        <span class="jurusan">RPL.</span><span class="kelas">2</span>
-      </h2>
-    </div>
-
-      <div class="hamburger" id="hamburger">&#9776;</div>
-
-    <nav id="navMenu" class="navMenu">
-      <div class="menu">
-        <a href="index.html">Home</a>
-        <a href="tentang.html">Tentang Kami</a>
-        <a href="galeri.html">Galeri Kami</a>
-        <a href="Latar Belakang.html">Info Website</a>
-      </div>
-      <div class="icon">
-        <a href="https://www.instagram.com/xiclusive.rpldua?igsh=cjB2dTNic2YwYjI5" target="_blank">
-          <ion-icon name="logo-instagram"></ion-icon>
-        </a>
-        <a href="https://www.tiktok.com/@offc.rpldua?_t=ZS-8w1Hp8vZHs0&_r=1" target="_blank">
-          <ion-icon name="logo-tiktok"></ion-icon>
-        </a>
-      </div>
-    </nav>
-  </header>
-  
-  <section class="gallery-section">
+    <header>
+        <div class="logo">
+          <h2>
+            <span class="jurusan">RPL.</span><span class="kelas">2</span>
+          </h2>
+        </div>
+    
+          <div class="hamburger" id="hamburger">&#9776;</div>
+    
+        <nav id="navMenu" class="navMenu">
+          <div class="menu">
+            <a href="index.html">Home</a>
+            <a href="tentang.html">Tentang Kami</a>
+            <a href="Siswa Siswi.html">Siswa & Siswi</a>
+            <a href="galeri.html">Galery</a>
+            <a href="Latar Belakang.html">Info Website</a>
+          </div>
+          <div class="icon">
+            <a href="https://www.instagram.com/xiclusive.rpldua?igsh=cjB2dTNic2YwYjI5" target="_blank">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+            <a href="https://www.tiktok.com/@offc.rpldua?_t=ZS-8w1Hp8vZHs0&_r=1" target="_blank">
+              <ion-icon name="logo-tiktok"></ion-icon>
+            </a>
+          </div>
+        </nav>
+      </header>
+      
+  <!-- Galeri untuk Juli 2023 -->
+  <section class="galeri-section">
     <h2>
-      <span class="putih">Galery</span> 
-      <span class="oranye">kami</span>
+        <span class="putih">Galery</span> 
+        <span class="pink">kami</span>
     </h2>
-      <div class="gallery-grid">
-      <div class="gallery-item" data-nama="Andi Pratama" data-kelas="XI RPL 2" data-info="Juara 1 Lomba Robotik" onclick="toggleInfo(this)">
-        <img src="img/Robot1.jpeg" alt="Robot 1">
-        <div class="photo-info">
-          <h4>Andi Pratama</h4>
-          <p>Kelas: XI RPL 2</p>
-          <p>Juara 1 Lomba Robotik</p>
-        </div>
-      </div>
   
-      <div class="gallery-item" data-nama="Budi Santoso" data-kelas="XI RPL 2" data-info="Ketua OSIS" onclick="toggleInfo(this)">
-        <img src="img/Robot2.jpeg" alt="Robot 2">
-        <div class="photo-info">
-          <h4>Budi Santoso</h4>
-          <p>Kelas: XI RPL 2</p>
-          <p>Ketua OSIS</p>
-        </div>
+    <h2 class="judul-bulan">Juli 2023</h2>
+    <div class="galeri-wrapper">
+      <button class="scroll-btn left" onclick="scrollGaleri(this, -1)">&#10094;</button>
+      <div class="galeri-scroll">
+        <img src="juli1.jpg" alt="Foto 1 Juli">
+        <img src="juli2.jpg" alt="Foto 2 Juli">
+        <img src="juli3.jpg" alt="Foto 3 Juli">
+        <img src="juli4.jpg" alt="Foto 4 Juli">
+        <img src="juli5.jpg" alt="Foto 5 Juli">
       </div>
-  
-      <div class="gallery-item" data-nama="Citra Lestari" data-kelas="XI RPL 1" data-info="Anggota Tim Futsal" onclick="toggleInfo(this)">
-        <img src="img/Robot3.jpeg" alt="Robot 3">
-        <div class="photo-info">
-          <h4>Citra Lestari</h4>
-          <p>Kelas: XI RPL 1</p>
-          <p>Anggota Tim Futsal</p>
-        </div>
-      </div>
-
-      <div class="gallery-item" data-nama="Budi Santoso" data-kelas="XI RPL 2" data-info="Ketua OSIS" onclick="toggleInfo(this)">
-        <img src="img/Robot1.jpeg" alt="Robot 4">
-        <div class="photo-info">
-          <h4>Budi Santoso</h4>
-          <p>Kelas: XI RPL 2</p>
-          <p>Ketua OSIS</p>
-        </div>
-      </div>
-
-      <div class="gallery-item" data-nama="Budi Santoso" data-kelas="XI RPL 2" data-info="Ketua OSIS" onclick="toggleInfo(this)">
-        <img src="img/Robot2.jpeg" alt="Robot 5">
-        <div class="photo-info">
-          <h4>Budi Santoso</h4>
-          <p>Kelas: XI RPL 2</p>
-          <p>Ketua OSIS</p>
-        </div>
-      </div>
-
-      <div class="gallery-item" data-nama="Budi Santoso" data-kelas="XI RPL 2" data-info="Ketua OSIS" onclick="toggleInfo(this)">
-        <img src="img/Robot3.jpeg" alt="Robot 6">
-        <div class="photo-info">
-          <h4>Budi Santoso</h4>
-          <p>Kelas: XI RPL 2</p>
-          <p>Ketua OSIS</p>
-        </div>
-      </div>
+      <button class="scroll-btn right" onclick="scrollGaleri(this, 1)">&#10095;</button>
     </div>
   </section>
-  
-  <!-- Modal untuk menampilkan informasi lebih lanjut -->
-  <div id="info-modal" class="modal">
-    <div class="modal-content">
-      <span class="close-btn">&times;</span>
-      <h3 id="modal-nama"></h3>
-      <p id="modal-kelas"></p>
-      <p id="modal-info"></p>
+
+  <!-- Galeri untuk Desember 2023 -->
+  <section class="galeri-section">
+    <h2 class="judul-bulan">Desember 2023</h2>
+    <div class="galeri-wrapper">
+      <button class="scroll-btn left" onclick="scrollGaleri(this, -1)">&#10094;</button>
+      <div class="galeri-scroll">
+        <img src="desember1.jpg" alt="Foto 1 Desember">
+        <img src="desember2.jpg" alt="Foto 2 Desember">
+        <img src="desember3.jpg" alt="Foto 3 Desember">
+        <img src="desember4.jpg" alt="Foto 4 Desember">
+      </div>
+      <button class="scroll-btn right" onclick="scrollGaleri(this, 1)">&#10095;</button>
     </div>
-  </div>
+  </section>
 
-  <script>
-    // Ambil elemen
-    const items    = document.querySelectorAll('.gallery-item');
-
-    // Buka modal dengan data dari atribut
-    items.forEach(img => {
-      img.style.cursor = 'pointer';
-      img.addEventListener('click', () => {
-        namaEl.textContent  = img.dataset.nama;
-        kelasEl.textContent = "Kelas: " + img.dataset.kelas;
-        infoEl.textContent  = img.dataset.info;
-        modal.style.display = 'flex';
-      });
-    });
-
-    // Tutup modal
-    closeBtn.addEventListener('click', () => modal.style.display = 'none');
-    modal.addEventListener('click', e => {
-      if (e.target === modal) modal.style.display = 'none';
-    });
-
-    // Toggle untuk informasi gambar
-    function toggleInfo(el) {
-      // Tutup yang lain dulu
-      document.querySelectorAll('.gallery-item').forEach(item => {
-        if (item !== el) item.classList.remove('active');
-      });
-
-      // Toggle class aktif
-      el.classList.toggle('active');
-    }
-
-    function toggleMenu() {
-    document.getElementById("menu").classList.toggle("show");
-  }
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>

@@ -1,68 +1,83 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <!--<link rel="icon" type="image/png" href="https://lh3.googleusercontent.com/pw/AP1GczMcLu4jnDbWBnhVRZYJ98pdkl-kic2_4So2DSutaGOB1Mn2h55nxdz1wI4l0ZSIrw06VsxYp3ddIyFmQbwEsThzjoeDIdo9RqtLTbar8cfb6SPgOET1XDjts9RV8RhS0GNTarKryHJ4ue6hGWkxqE0S=w878-h878-s-no-gm?authuser=0">-->
-    <link rel="stylesheet" href="style.css">
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home - SBC</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <header class="header">
-        <a href="#" class="logo">XI.RPL.2</a>
+  <!-- awal navbar -->
+  <nav class="navbar-alt">
+    <div class="logo-alt">SBC</div>
 
+    <!-- tombol hamburger -->
     <div class="hamburger-alt" id="hamburger">&#9776;</div>
 
-        <nav class="navbar">
-            <a href="index.html" class="active">Home</a>
-            <a href="tentang.html">Tentang</a>
-            <a href="Siswa Siswi.html">Siswa Siswi</a>
-            <a href="galeri.html">Galery</a>
-            <a href="contac.html">Contact</a>
-        </nav>
-    </header>
+    <div class="menu-alt" id="navMenu">
+      <a href="index.html">Home</a>
+      <a href="tentang.html">Tentang</a>
+      <a href="anggota.html">Anggota</a>
+      <a href="karya.html">Hasil Karya</a>
+      <a href="prestasi.html">Prestasi</a>
+      <a href="dokumentasi.html">Dokumentasi</a>
+    </div>
+  </nav>
+  <!-- akhir navbar -->
 
-    <section class="home">
-        <div class="home-content">
-            <h1>Welcome To Class RPL 2</h1>
-            <h3>Kelas Paling Rame, Tapi Penuh Cerita</h3>
-            <p>Nggak ada yang sempurna, kecuali absen yang lengkap dan tugas yang belum dikerjain, Asoyy!!</p>
-            <div class="btn-box">
-                <a href="tentang.html">Tentang</a>
-                <a href="Siswa Siswi.html">Anggota</a>
-            </div>
-        </div>
-        <div class="home-right">
-            <div class="home-img"></div>
+  <!-- awal hero-style card -->
+  <section class="blackclover-style">
+    <div class="bc-card">
+      <div class="bc-left">
+        <div class="putih">
+        <h1>SKEMA</h1>
         </div>
 
-        <div class="home-icon">
-            <a href="https://www.tiktok.com/@offc.rpldua?_t=ZS-8xuPWgDerIG&_r=1"><ion-icon name="logo-tiktok"></ion-icon></ion-icon></a>
-            <a href="mailto:rpldua8@gmail.com"><ion-icon name="mail"></ion-icon></a>
-            <a href="https://www.instagram.com/xiiclusive.rpldua?igsh=cjB2dTNic2YwYjI5"><ion-icon name="logo-instagram"></ion-icon></a>
+        <div class="biru">
+        <h1>BROADCASTING</h1>
         </div>
-    </section>
+        
+        <p>Sejak 2022 | Meningkatkan Kreativitas dan Produksi Media</p>
+        <div class="bc-buttons">
+          <a href="tentang.html" class="bc-btn">Lihat Selengkapnya</a>
+          <a href="#" class="bc-play">▶</a>
+          <span class="bc-play-text">Tonton Profil</span>
+        </div>
+        <div class="bc-footer">
+          <p>Terakhir diperbarui: 24 Juni 2025</p>
+        </div>
+      </div>
+      <div class="bc-right">
+        <div class="bc-img"></div>
+      </div>
+    </div>
 
-<!-- ==== BUBBLE KOMENTAR ==== -->
-<div class="bubble-chat">
-  <button id="toggle-chat">💬</button>
-  <div class="chat-box" id="chat-box">
-    <h2>Chat</h2>
-    <div id="chat-messages"></div>
+    <div class="bc-pagination">
+      <span class="active">01</span>
+      <span>02</span>
+      <span>03</span>
+      <span>04</span>
+      <span>05</span>
+    </div>
+  </section>
 
-    <form id="chat-form">
-      <input type="text" id="chat-name" placeholder="Masukkan nama" required />
-      <textarea id="chat-input" placeholder="Masukkan pesan" rows="2" required></textarea>
-      <button type="submit">➤</button>
-    </form>
+  <!-- Floating chat button in the bottom right corner -->
+  <button id="open-chat-btn">
+      💬
+  </button>
+  <button id="login-btn" style="display:none;">Login Google</button>
+
+  <div id="chat-box" style="display: none;">
+    <button id="logout-btn" style="display:none;">Logout</button>
+    <p id="user-info"></p>
+    <ul id="messages"></ul>
+    <input type="text" id="message-input" placeholder="Ketik pesan...">
+    <button id="send-btn">Kirim</button>
   </div>
-</div>
 
-
-<script type="module" src="bubble-komentar.js"></script>
-<script src="script.js"></script>
-
+  <!-- akhir hero-style card -->
+  <script src="script.js"></script>
+  <script type="module" src="firebase-config.js"></script>
 </body>
 </html>
+ 

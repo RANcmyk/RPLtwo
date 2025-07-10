@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Anggota - SBC</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- awal navbar -->
+  <nav class="navbar-alt">
+    <div class="logo-alt">SBC</div>
+
+    <!-- tombol hamburger -->
+    <div class="hamburger-alt" id="hamburger">&#9776;</div>
+
+    <div class="menu-alt" id="navMenu">
+      <a href="index.html">Home</a>
+      <a href="tentang.html">Tentang</a>
+      <a href="anggota.html">Anggota</a>
+      <a href="karya.html">Hasil Karya</a>
+      <a href="prestasi.html">Prestasi</a>
+      <a href="dokumentasi.html">Dokumentasi</a>
+    </div>
+  </nav>
+  <!-- akhir navbar -->
+
+  <!-- awal anggota -->
+<section id="anggota">
+  
+  <!-- awal blok -->
+  <div class="blok-angkatan">
+    <h3 class="angkatan">📅 Angkatan 2025</h3>
+    <div class="anggota">
+      <div class="anggota-card">
+        <img src="https://lh3.googleusercontent.com/pw/AP1GczPzSB0_wjAQrSvaDSvF1IwbnNjmxWIgZpMffoG4jCEupazESz6H9cokoW_S7l9hOYnolCMr00KblbPz3e7LTC55g66YQyymEPEjR6hXzg6oYt4Dl-OWCQR7ZiVDj3nF2qEHqOC_XAjocClThVp6QvU=w878-h878-s-no-gm?authuser=0" />
+        <h3>Pembina</h3>
+        <p>Lorem ipsum dolor sit amet.</p>
+      </div>
+      <div class="anggota-card">
+        <img src="https://lh3.googleusercontent.com/pw/AP1GczPzSB0_wjAQrSvaDSvF1IwbnNjmxWIgZpMffoG4jCEupazESz6H9cokoW_S7l9hOYnolCMr00KblbPz3e7LTC55g66YQyymEPEjR6hXzg6oYt4Dl-OWCQR7ZiVDj3nF2qEHqOC_XAjocClThVp6QvU=w878-h878-s-no-gm?authuser=0" />
+        <h3>Angkatan 2024</h3>
+        <p>Informasi singkat.</p>
+      </div>
+    </div>
+  </div>
+  <!-- akhir blok -->
+
+  <!-- awal blok -->
+  <div class="blok-angkatan">
+    <h3 class="angkatan">📅 Angkatan 2024</h3>
+    <div class="anggota">
+      <div class="anggota-card">
+        <img src="https://lh3.googleusercontent.com/pw/AP1GczPzSB0_wjAQrSvaDSvF1IwbnNjmxWIgZpMffoG4jCEupazESz6H9cokoW_S7l9hOYnolCMr00KblbPz3e7LTC55g66YQyymEPEjR6hXzg6oYt4Dl-OWCQR7ZiVDj3nF2qEHqOC_XAjocClThVp6QvU=w878-h878-s-no-gm?authuser=0" />
+        <h3>Angkatan 2023</h3>
+        <p>Informasi singkat.</p>
+      </div>
+    </div>
+  </div>
+  <!-- akhir blok -->
+
+</section>
+
+    <!-- Floating chat button in the bottom right corner -->
+  <button id="open-chat-btn">
+      💬
+  </button>
+  <button id="login-btn" style="display:none;">Login Google</button>
+
+  <div id="chat-box" style="display: none;">
+    <button id="logout-btn" style="display:none;">Logout</button>
+    <p id="user-info"></p>
+    <ul id="messages"></ul>
+    <input type="text" id="message-input" placeholder="Ketik pesan...">
+    <button id="send-btn">Kirim</button>
+  </div>
+
+  <!-- akhir anggota -->
+    <script src="script.js"></script>
+    <script type="module" src="firebase-config.js"></script>
+</body>
+</html>

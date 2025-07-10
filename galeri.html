@@ -3,78 +3,99 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>rpltu-Galery</title>
+        <title>RPL - Galery</title>
         <link rel="stylesheet" href="style.css">
-        <script src="script.js"></script>
         <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
         <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     </head>
 <body>
-    <header>
-        <div class="logo">
-          <h2>
-            <span class="jurusan">RPL.</span><span class="kelas">2</span>
-          </h2>
-        </div>
-    
-          <div class="hamburger" id="hamburger">&#9776;</div>
-    
-        <nav id="navMenu" class="navMenu">
-          <div class="menu">
-            <a href="index.html">Home</a>
-            <a href="tentang.html">Tentang Kami</a>
-            <a href="Siswa Siswi.html">Siswa & Siswi</a>
-            <a href="galeri.html">Galery</a>
-            <a href="Latar Belakang.html">Info Website</a>
-          </div>
-          <div class="icon">
-            <a href="https://www.instagram.com/xiclusive.rpldua?igsh=cjB2dTNic2YwYjI5" target="_blank">
-              <ion-icon name="logo-instagram"></ion-icon>
-            </a>
-            <a href="https://www.tiktok.com/@offc.rpldua?_t=ZS-8w1Hp8vZHs0&_r=1" target="_blank">
-              <ion-icon name="logo-tiktok"></ion-icon>
-            </a>
-          </div>
-        </nav>
-      </header>
+  <!-- Navbar -->
+  <header class="header">
+    <a href="#" class="logo">XI.RPL.2</a>
+    <div class="hamburger-alt" id="hamburger">&#9776;</div>
+    <nav class="navbar">
+      <a href="index.html">Home</a>
+      <a href="tentang.html">Tentang</a>
+      <a href="Siswa Siswi.html">Siswa Siswi</a>
+      <a href="galeri.html" class= "active">Galery</a>
+      <a href="contac.html">Contact</a>
+    </nav>
+  </header>
       
-  <!-- Galeri untuk Juli 2023 -->
-  <section class="galeri-section">
-    <h2>
-        <span class="putih">Galery</span> 
-        <span class="pink">kami</span>
-    </h2>
-  
-    <h2 class="judul-bulan">Juli 2023</h2>
-    <div class="galeri-wrapper">
-      <button class="scroll-btn left" onclick="scrollGaleri(this, -1)">&#10094;</button>
-      <div class="galeri-scroll">
-        <img src="juli1.jpg" alt="Foto 1 Juli">
-        <img src="juli2.jpg" alt="Foto 2 Juli">
-        <img src="juli3.jpg" alt="Foto 3 Juli">
-        <img src="juli4.jpg" alt="Foto 4 Juli">
-        <img src="juli5.jpg" alt="Foto 5 Juli">
-      </div>
-      <button class="scroll-btn right" onclick="scrollGaleri(this, 1)">&#10095;</button>
-    </div>
-  </section>
+<section class="galeri">
 
-  <!-- Galeri untuk Desember 2023 -->
-  <section class="galeri-section">
-    <h2 class="judul-bulan">Desember 2023</h2>
-    <div class="galeri-wrapper">
-      <button class="scroll-btn left" onclick="scrollGaleri(this, -1)">&#10094;</button>
-      <div class="galeri-scroll">
-        <img src="desember1.jpg" alt="Foto 1 Desember">
-        <img src="desember2.jpg" alt="Foto 2 Desember">
-        <img src="desember3.jpg" alt="Foto 3 Desember">
-        <img src="desember4.jpg" alt="Foto 4 Desember">
-      </div>
-      <button class="scroll-btn right" onclick="scrollGaleri(this, 1)">&#10095;</button>
+  <!-- ulangi ini per bulan -->
+  <h2>juni 2025</h2>
+  <div class="foto-scroll">
+    <div class="foto-item">
+      <img src="https://lh3.googleusercontent.com/pw/AP1GczOTyf7MjSjQe_BoX9OWGwJvCVmCLw0drk357lC91-FGaTaR78kYkt9J5W_QecppKwBSWCqYzV2R3Y5OsyrmOFV7c_JAR-zLejCgt3CZAyvFBcl9MrApdHlTPB2Fj9QbmjTTxe6FQGdsuOLdlj59FWFi=w659-h878-s-no-gm?authuser=0" alt="Juni 1">
     </div>
-  </section>
+    <div class="foto-item">
+      <img src="https://lh3.googleusercontent.com/pw/AP1GczNEUHGfuHq41UDG6dFc-R2O4rwvQXez578bnT4MWWyDPghgS-iBONu_ZeykSZuqYuUtLgcmwBthC4MM23RILyq-EOBEL2G4DXHKi7yUatfWYk4YU8DExMcbdAk812MmouJWtg0RYe3nD_0S-ZsCMVj1=w659-h878-s-no-gm?authuser=0" alt="Juni 2">
+    </div>
+    <!--<div class="foto-item">
+      <img src="galeri/des-3.jpg" alt="Desember 4">
+    </div>
+        <div class="foto-item">
+      <img src="galeri/des-3.jpg" alt="Desember 5">
+    </div>
+    <div class="foto-item">
+      <img src="galeri/des-3.jpg" alt="Desember 6">
+    </div>
+    <div class="foto-item">
+      <img src="galeri/des-3.jpg" alt="Desember 7">
+    </div>
+    <div class="foto-item">
+      <img src="galeri/des-3.jpg" alt="Desember 8">
+    </div>
+    <div class="foto-item">
+      <img src="galeri/des-3.jpg" alt="Desember 9">
+    </div>
 
-  <script src="script.js"></script>
+     Tambah lagi jika ada -->
+  </div>
+  <!-- akhir -->
+
+
+ <!-- <h2>Januari 2026</h2>
+  <div class="foto-scroll">
+    <div class="foto-item">
+      <img src="galeri/jan-1.jpg" alt="Januari 1">
+    </div>
+    <div class="foto-item">
+      <img src="galeri/jan-2.jpg" alt="Januari 2">
+    </div>
+     Tambah lagi jika ada 
+  </div>
+</section>-->
+
+<div id="modal-galeri" class="modal-galeri">
+  <div class="modal-galeri-content">
+    <span class="galeri-close">&times;</span>
+    <img id="modal-galeri-img" src="" alt="Foto Besar" />
+  </div>
+</div>
+
+
+
+<!-- ==== BUBBLE KOMENTAR ==== -->
+<div class="bubble-chat">
+  <button id="toggle-chat">💬</button>
+  <div class="chat-box" id="chat-box">
+    <h2>Chat</h2>
+    <div id="chat-messages"></div>
+
+    <form id="chat-form">
+      <input type="text" id="chat-name" placeholder="Masukkan nama" required />
+      <textarea id="chat-input" placeholder="Masukkan pesan" rows="2" required></textarea>
+      <button type="submit">➤</button>
+    </form>
+  </div>
+</div>
+
+
+<script type="module" src="bubble-komentar.js"></script>
+<script src="script.js"></script>
 </body>
 </html>

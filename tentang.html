@@ -2,55 +2,66 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>rpltu-Tentang</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tentang Kami</title>
   <link rel="stylesheet" href="style.css">
-  <script src="script.js"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
-  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </head>
 <body>
-  <header>
-    <div class="logo">
-      <h2>
-        <span class="jurusan">RPL.</span><span class="kelas">2</span>
-      </h2>
-    </div>
-  
-      <div class="hamburger" id="hamburger">&#9776;</div>
-  
-    <nav id="navMenu" class="navMenu">
-      <div class="menu">
-        <a href="index.html">Home</a>
-        <a href="tentang.html">Tentang Kami</a>
-        <a href="Siswa Siswi.html">Siswa & Siswi</a>
-        <a href="galeri.html">Galery</a>
-        <a href="Latar Belakang.html">Info Website</a>
-      </div>
-      <div class="icon">
-        <a href="https://www.instagram.com/xiclusive.rpldua?igsh=cjB2dTNic2YwYjI5" target="_blank">
-          <ion-icon name="logo-instagram"></ion-icon>
-        </a>
-        <a href="https://www.tiktok.com/@offc.rpldua?_t=ZS-8w1Hp8vZHs0&_r=1" target="_blank">
-          <ion-icon name="logo-tiktok"></ion-icon>
-        </a>
-      </div>
+
+  <!-- Navbar -->
+  <header class="header">
+    <a href="#" class="logo">XI.RPL.2</a>
+    <div class="hamburger-alt" id="hamburger">&#9776;</div>
+    <nav class="navbar">
+      <a href="index.html">Home</a>
+      <a href="tentang.html" class="active">Tentang</a>
+      <a href="Siswa Siswi.html">Siswa Siswi</a>
+      <a href="galeri.html">Galery</a>
+      <a href="contac.html">Contact</a>
     </nav>
   </header>
-  
-<section class="about-section">
-  <h2>
-    <span class="putih">Tentang</span> 
-    <span class="pink">kami</span>
-  </h2>
-    <p>Kami adalah kelas yang penuh semangat, kebersamaan, dan cita-cita tinggi. Tujuan kami adalah berkembang bersama dan menciptakan kenangan indah selama masa sekolah. Setiap individu dalam kelas ini memiliki potensi yang luar biasa dan kami percaya kerja sama akan membawa kita menuju kesuksesan.</p>
-</section>
-<script>
-  function toggleMenu() {
-    document.getElementById("menu").classList.toggle("show");
-  }
-</script>
 
+<section class="tentang">
+  <h3>Tentang Kami</h3>
+
+  <p>
+    Kami adalah keluarga besar dari kelas RPL 2 yang penuh semangat, solidaritas, dan kreativitas. Di dalam kelas ini, kami bukan hanya belajar tentang kode dan program, tapi juga belajar menjadi manusia yang lebih baik. Setiap harinya, kami saling mendukung satu sama lain, menghadapi tantangan bersama, dan tumbuh bersama sebagai satu tim.
+  </p>
+
+  <div style="text-align: center;">
+    <img src="https://lh3.googleusercontent.com/pw/AP1GczN1Voad-8fcZLOZ-fddIND7BqbBvmMG_54Jp6UC4TYOK2ASftfZvKfPUkOTAfijRuM175PIxuqKVzULFZOqVOQJKH6Fz10cbeaw2JvI2NkjMCQC3AzQRsTXXYTVee_EGHH3p7jbp4q8yal9GUDQ_ICS=w1560-h878-s-no-gm?authuser=0" alt="Foto kebersamaan 1" style="max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 0 15px #00abf0; margin: 20px 0;">
+  </div>
+
+  <p>
+    Kebersamaan adalah kekuatan kami. Entah itu saat belajar, bermain, atau menghadapi ujian, kami selalu berusaha untuk tidak meninggalkan siapa pun di belakang. Banyak kenangan lucu, haru, dan penuh tawa yang membuat perjalanan ini sangat berarti. Setiap senyum dalam foto-foto kami menyimpan cerita yang tak akan pernah kami lupakan.
+  </p>
+
+  <div style="text-align: center;">
+    <img src="https://lh3.googleusercontent.com/pw/AP1GczMyiLWBvN6tfPiqsqjgv81QqT6nYlwtEuPBh0_NFbW8nICgr6k9VHkC9AuVMCS2kd0LgD1WEMhIsvQOI5drxFXylPyHYqphnt1Q6rn827SxHyFhJqXQpq6bXK3PoBMklPeCRDhneauzoldtEinkEa3o=w1901-h878-s-no-gm?authuser=0" alt="Foto kebersamaan 2" style="max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 0 15px #00abf0; margin: 20px 0;">
+  </div>
+
+  <p>
+    Kami percaya bahwa masa depan cerah dimulai dari ruang kelas yang hangat dan penuh semangat. RPL 2 bukan hanya tempat belajar, tapi juga tempat kami menemukan arti kebersamaan, persahabatan, dan mimpi. Terima kasih sudah menjadi bagian dari cerita kami.
+  </p>
+</section>
+
+<!-- ==== BUBBLE KOMENTAR ==== -->
+<div class="bubble-chat">
+  <button id="toggle-chat">💬</button>
+  <div class="chat-box" id="chat-box">
+    <h2>Chat</h2>
+    <div id="chat-messages"></div>
+
+    <form id="chat-form">
+      <input type="text" id="chat-name" placeholder="Masukkan nama" required />
+      <textarea id="chat-input" placeholder="Masukkan pesan" rows="2" required></textarea>
+      <button type="submit">➤</button>
+    </form>
+  </div>
+</div>
+
+
+<script type="module" src="bubble-komentar.js"></script>
+<script src="script.js"></script>
 </body>
 </html>

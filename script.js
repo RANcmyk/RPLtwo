@@ -1,79 +1,119 @@
-// Motivasi
-const motivasi = [
-  "Teruslah belajar, karena ilmu tak akan pernah habis.",
-  "Gagal itu biasa, yang penting tetap mencoba.",
-  "Kerja keras hari ini adalah kesuksesan di masa depan.",
-  "Jangan takut bermimpi besar."
-];
+document.addEventListener('DOMContentLoaded', () => {
+    const hamburger = document.getElementById('hamburger');
+    const navbar = document.querySelector('.navbar');
 
-function showMotivation() {
-  const text = motivasi[Math.floor(Math.random() * motivasi.length)];
-  const motivationText = document.getElementById('motivation-text');
-  if (motivationText) {
-    motivationText.textContent = text;
-  }
-}
+    hamburger.addEventListener('click', (e) => {
+        e.stopPropagation(); // biar nggak langsung ketutup waktu hamburger diklik
+        navbar.classList.toggle('active');
+    });
 
-// Modal gallery (khusus halaman galeri)
-const fotoItems = document.querySelectorAll('.foto-item');
-const modal = document.getElementById("info-modal");
-const closeBtn = document.querySelector(".close-btn");
-const namaEl = document.getElementById("modal-nama");
-const kelasEl = document.getElementById("modal-kelas");
-const infoEl = document.getElementById("modal-info");
+    // Tutup menu kalau klik di luar navbar atau hamburger
+    document.addEventListener('click', (e) => {
+        if (!navbar.contains(e.target) && !hamburger.contains(e.target)) {
+            navbar.classList.remove('active');
+        }
+    });
 
-if (modal && closeBtn && namaEl && kelasEl && infoEl && fotoItems.length > 0) {
-  fotoItems.forEach(item => {
-    item.style.cursor = 'pointer';
-    item.addEventListener('click', () => {
-      // Tutup modal dulu kalau sedang terbuka
-      modal.style.display = "none";
+    // ===== MODAL LOGIC ===== //
+    const modal = document.getElementById('detailModal');
+    const modalImg = document.getElementById('modalImage');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalDesc = document.getElementById('modalDesc');
+    const modalTTL = document.getElementById('modalTTL');
+    const modalJK = document.getElementById('modalJK');
+    const modalAlamat = document.getElementById('modalAlamat');
+    const modalMotivasi = document.getElementById('modalMotivasi');
+    const modalSosmed = document.getElementById('modalSosmed');
+    const modalContent = document.querySelector('.modal-content');
 
-      // Delay sedikit sebelum isi ulang
+    document.querySelectorAll('.anggota-card').forEach(card => {
+      card.addEventListener('click', () => {
+        const img = card.querySelector('img').src;
+        const title = card.querySelector('h3').textContent;
+        const ttl = card.dataset.ttl || "-";
+        const jk = card.dataset.gender || "-";
+        const alamat = card.dataset.alamat || "-";
+        const motivasi = card.dataset.motivasi || "-";
+        const ig = card.dataset.ig || "#";
+        const tiktok = card.dataset.tiktok || "#";
+
+        modalImg.src = img;
+        modalTitle.textContent = title;
+        modalTTL.textContent = `Tempat, Tanggal Lahir : ${ttl}`;
+        modalJK.textContent = `Jenis Kelamin : ${jk}`;
+        modalAlamat.textContent = `Alamat : ${alamat}`;
+        modalMotivasi.textContent = `Motivasi : ${motivasi}`;
+        let sosmedHTML = "";
+        if (ig.trim() !== "" && ig !== "#") {
+          sosmedHTML += `<a href="${ig}" target="_blank"><ion-icon name="logo-instagram"></ion-icon></a>`;
+        }
+        modalSosmed.innerHTML = sosmedHTML;
+
+        //cegah bug//
+        modalSosmed.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', (e) => e.stopPropagation());
+        });
+
+
+        modal.classList.add('active');
+        modalContent.style.animation = 'growFromCenter 0.5s ease forwards';
+      });
+    });
+
+    // Tutup modal jika klik di mana pun dalam modal (luar/dalam)
+    modal.addEventListener('click', (e) => {
+      modalContent.style.animation = 'shrinkToCenter 0.4s ease forwards';
       setTimeout(() => {
-        namaEl.textContent  = item.dataset.nama;
-        kelasEl.textContent = "Kelas: " + item.dataset.kelas;
-        infoEl.textContent  = item.dataset.info;
-        modal.style.display = 'flex';
-      }, 50);
+        modal.classList.remove('active');
+      }, 400);
     });
-  });
-
-  closeBtn.addEventListener("click", () => {
-    modal.style.display = "none";
-  });
-
-  modal.addEventListener("click", e => {
-    if (e.target === modal) {
-      modal.style.display = "none";
-    }
-  });
-}
-
-// Navbar hamburger fix
-document.addEventListener("DOMContentLoaded", function () {
-  const hamburger = document.getElementById("hamburger");
-  const navMenu = document.getElementById("navMenu");
-
-  if (hamburger && navMenu) {
-    hamburger.addEventListener("click", () => {
-      navMenu.classList.toggle("active");
-    });
-
-    // Tutup menu jika klik di luar
-    document.addEventListener("click", function (e) {
-      if (!hamburger.contains(e.target) && !navMenu.contains(e.target)) {
-        navMenu.classList.remove("active");
-      }
-    });
-  }
 });
 
-function scrollGaleri(button, direction) {
-  const scrollBox = button.parentElement.querySelector(".galeri-scroll");
-  const scrollAmount = scrollBox.offsetWidth * 0.6; // Scroll 60% of the visible width
-  scrollBox.scrollBy({
-    left: direction * scrollAmount,
-    behavior: 'smooth',
+
+//Khusus Galeri//
+document.addEventListener("DOMContentLoaded", () => {
+  const galeriModal = document.getElementById("modal-galeri");
+  const galeriImg = document.getElementById("modal-galeri-img");
+  const galeriClose = galeriModal.querySelector(".galeri-close");
+  const prevBtn = document.getElementById("prevBtn");
+  const nextBtn = document.getElementById("nextBtn");
+
+  const allImages = Array.from(document.querySelectorAll(".foto-item img"));
+  let currentIndex = 0;
+
+  function showModal(index) {
+    currentIndex = index;
+    galeriImg.src = allImages[index].src;
+    galeriModal.style.display = "flex";
+  }
+
+  allImages.forEach((img, i) => {
+    img.addEventListener("click", () => {
+      showModal(i);
+    });
   });
-}
+
+  galeriClose.addEventListener("click", () => {
+    galeriModal.style.display = "none";
+  });
+
+  galeriModal.addEventListener("click", (e) => {
+    if (!e.target.closest(".modal-galeri-content")) {
+      galeriModal.style.display = "none";
+    }
+  });
+
+  prevBtn.addEventListener("click", (e) => {
+    e.stopPropagation(); // cegah modal tertutup
+    currentIndex = (currentIndex - 1 + allImages.length) % allImages.length;
+    galeriImg.src = allImages[currentIndex].src;
+  });
+
+  nextBtn.addEventListener("click", (e) => {
+    e.stopPropagation();
+    currentIndex = (currentIndex + 1) % allImages.length;
+    galeriImg.src = allImages[currentIndex].src;
+  });
+});
+
+
